@@ -12,3 +12,6 @@
 
 
 
+string[] arrayBegin = { "hello", "2", "world", ":-)" };
+Console.WriteLine("Исходный массив: [" + string.Join(", ", arrayBegin) + "]");
+
