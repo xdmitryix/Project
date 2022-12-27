@@ -12,21 +12,21 @@ string[] arrayBegin = { "hello", "2", "world", ":-)" };
 Console.WriteLine("Исходный массив: [" + string.Join(", ", arrayBegin) + "]");
 int quantity = 0;
 int i = 0;
-int arrayLength = arrayBegin.Length;
-for (i = 0; i < arrayLength; i++)
+int arrayLenBeg = arrayBegin.Length;
+for (i = 0; i < arrayLenBeg; i++)
 {
-    int arrBeg = arrayBegin[i].Length;
-    if (arrBeg <= 3)
+    int arrBegElementLength = arrayBegin[i].Length;
+    if (arrBegElementLength <= 3)
     {
         quantity++;
     }
 }
 string[] arrayResult = new string[quantity];
 int j = 0;
-for (i = 0; i < arrayLength; i++)
+for (i = 0; i < arrayLenBeg; i++)
 {
-    int arrBeg = arrayBegin[i].Length;
-    if (arrBeg <= 3)
+    int arrBegElementLength = arrayBegin[i].Length;
+    if (arrBegElementLength <= 3)
     {
         arrayResult[j] = arrayBegin[i];
         j++;
