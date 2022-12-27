@@ -8,60 +8,12 @@
 // ["Russia", "Denmark", "Kazan"] -> []
 
 
-
-// int[] NumberArrayCharacters(string[] arr)
-// {
-//     int quantity = 0;
-//     int arrayLength= arr.Length;
-//     for (int i = 0; i < arrayLength; i++)
-//     {
-//         int x = arr[i].Length;
-//         if (x <= 3)
-//         {
-//             quantity++;
-//         }
-//     }
-//     return quantity;
-// }
-
-
-
-
-
-
-
-// string[] arrayBegin = { "hello", "2", "world", ":-)" };
-// Console.WriteLine("Исходный массив: [" + string.Join(", ", arrayBegin) + "]");
-// int quantity = NumberArrayCharacters(arrayBegin);
-// Console.WriteLine(quantity);
-
-
-// int[] NumberArrayCharacters(string[] arr)
-// {
-//     int quantity = 0;
-//     int arrayLength= arr.Length;
-//     for (int i = 0; i < arrayLength; i++)
-//     {
-//         int x = arr[i].Length;
-//         if (x <= 3)
-//         {
-//             quantity++;
-//         }
-//     }
-//     return quantity;
-// }
-
-
-
-
-
-
-
 string[] arrayBegin = { "hello", "2", "world", ":-)" };
 Console.WriteLine("Исходный массив: [" + string.Join(", ", arrayBegin) + "]");
 int quantity = 0;
-int arrayLength= arrayBegin.Length;
-for (int i = 0; i < arrayLength; i++)
+int i = 0;
+int arrayLength = arrayBegin.Length;
+for (i = 0; i < arrayLength; i++)
 {
     int arrBeg = arrayBegin[i].Length;
     if (arrBeg <= 3)
@@ -70,7 +22,17 @@ for (int i = 0; i < arrayLength; i++)
     }
 }
 string[] arrayResult = new string[quantity];
-
+int j = 0;
+for (i = 0; i < arrayLength; i++)
+{
+    int arrBeg = arrayBegin[i].Length;
+    if (arrBeg <= 3)
+    {
+        arrayResult[j] = arrayBegin[i];
+        j++;
+    }
+}
+Console.WriteLine("Результирующий массив: [" + string.Join(", ", arrayResult) + "]");
 
 
 
